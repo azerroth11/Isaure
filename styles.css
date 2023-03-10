@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url(./AktivGrotesk.otf);
+}
+
+:root {
+  --accent: #0000ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Aktiv Grotesk';
+  position: relative;
+  height: 100vh;
+  max-width: 100vw;
+  /* overflow: hidden; */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: min(100%, 500px);
+  margin: 1rem;
+  transition: opacity 0.5s;
+  position: relative;
+}
+
+header h2:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+header img {
+  position: absolute;
+  top: 2rem;
+  left: 25%;
+  max-width: 25%;
+}
+
+/* Main */
+.projects {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  width: fit-content;
+}
+
+.projects h5 {
+  font-weight: 200;
+}
+
+.about {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  width: fit-content;
+}
+
+.about h5 {
+  text-align: right;
+  font-weight: 200;
+}
+
+.contact {
+  position: absolute;
+  right: 0;
+  top: 0;
+  writing-mode: vertical-lr;
+  padding: 0.5rem 0.5rem;
+}
+
+.contact h2 {
+  font-weight: 200;
+}
+
+main .link h1 {
+  transition: color 0.25s;
+}
+
+main .link h1:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* Gallery */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main img {
+  width: calc(100% / 3);
+  max-width: 400px;
+  margin-bottom: 2%;
+  object-fit: cover;
+  vertical-align: middle;
+  max-height: calc(100vh - 50px);
+}
+
+main img.horizontal {
+  width: 100%;
+  max-width: 1500px;
+}
+
+@media screen and (max-width: 768px) {
+  main img {
+    width: 50%;
+  }
+  main img.horizontal {
+    width: 100%;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+/* Javascript */
+.hidden {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.selectedLink {
+  transition: color 0.25s;
+  color: var(--accent);
+}
