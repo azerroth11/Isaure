@@ -38,6 +38,7 @@ img {
 
 .section {
   height: 100dvh;
+  max-width: 1500px;
   display: grid;
   padding: 1rem 0;
   gap: 1rem;
@@ -45,6 +46,7 @@ img {
   align-content: center;
   /* border: 1px solid red; */
   scroll-snap-align: start;
+  position: relative;
 }
 
 .section::before {
@@ -157,4 +159,43 @@ main {
 .hidden {
   transition: opacity 0.5s;
   opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'first second'
+      'third second'
+      'fourth second'
+      'fifth second';
+    margin: auto;
+    scroll-snap-align: center;
+  }
+
+  .section > * {
+    place-self: center;
+  }
+
+  .infos {
+    grid-area: first;
+  }
+
+  .section .cover,
+  .section .swiper {
+    grid-area: second;
+    max-height: 100%;
+  }
+
+  .keywords {
+    grid-area: third;
+  }
+
+  .description {
+    grid-area: fourth;
+  }
+
+  .section a {
+    grid-area: fifth;
+  }
 }
