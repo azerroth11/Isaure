@@ -40,44 +40,34 @@ const data = [
       "Olio e Burro est un restaurant né de la rencontre d'un français et d'une italienne amoureux de leur culture. Ils proposent une cuisine locale et sans gluten qui valorise la simplicité et le savoir faire. Le couple propose des plats fait maison à partir de produits bruts.  Cette identité est une vitrine de leur singularité : elle traduit un artisanat qui se veut simple mais chaleureux. La conception de cette identité est le fruit de recherches graphiques et plastiques prolifiques autour de la cuisine.",
   },
   {
-    name: 'Olio e Burro',
-    cover: './img/gallery/olio e burro.webp',
-    keywords: ['Branding', 'Illustration'],
+    name: 'Pannonica',
+    cover: './img/Projet 2/Pannonica 1.webp',
+    keywords: ['Identité', 'Website'],
     challenge:
-      "Trouver l'équilibre entre l'aspect artisanal et moderne, tout en transmettant la simplicité et le savoir-faire de leur cuisine avec une identité visuelle élégante et contemporaine pour attirer les clients.",
+      "Une refonte de l'identité visuelle à la fois sobre et élégante, mais également facilement identifiable pour la scène de jazz et de musiques improvisées à Nantes.",
     solution:
-      "Une palette de couleurs naturelles, des illustrations dessinées à la main et des typographies simples mais modernes pour créer une identité visuelle qui reflète parfaitement l'atmosphère chaleureuse et authentique d'Olio e Burro.",
+      "Créaton d'une maquette web et d'une revue saisonnière pour mettre en valeur l'identité visuelle, en la déclinant sur différents supports pour toucher un public plus large et promouvoir cette scène musicale dynamique et innovante. ",
     imgs: [
-      './img/Projet 1/olio 1.webp',
-      './img/Projet 1/olio 6.webp',
-      './img/Projet 1/olio 7.webp',
-      './img/Projet 1/olio 5.webp',
-      './img/Projet 1/olio 4.webp',
-      './img/Projet 1/olio 3.webp',
-      './img/Projet 1/olio 2.webp',
+      './img/Projet 2/Pannonica 1.webp',
+      './img/Projet 2/Pannonica 2.webp',
+      './img/Projet 2/Pannonica 3.webp',
     ],
     description:
-      "Olio e Burro est un restaurant né de la rencontre d'un français et d'une italienne amoureux de leur culture. Ils proposent une cuisine locale et sans gluten qui valorise la simplicité et le savoir faire. Le couple propose des plats fait maison à partir de produits bruts.  Cette identité est une vitrine de leur singularité : elle traduit un artisanat qui se veut simple mais chaleureux. La conception de cette identité est le fruit de recherches graphiques et plastiques prolifiques autour de la cuisine.",
+      "Refonte de l'identité de la scène de jazz et de musiques improvisées à Nantes. L'identité doit être sobre et élégante tout en étant aisément idéntifiable. Le logotype en monochromie est constitué d'une typographie incisive qui réprésente les variations sonores. Maquette web et déclinaisons sur différents supports numériques et pour une revue saisonnière.",
   },
   {
-    name: 'Olio e Burro',
-    cover: './img/gallery/olio e burro.webp',
-    keywords: ['Branding', 'Illustration'],
-    challenge:
-      "Trouver l'équilibre entre l'aspect artisanal et moderne, tout en transmettant la simplicité et le savoir-faire de leur cuisine avec une identité visuelle élégante et contemporaine pour attirer les clients.",
-    solution:
-      "Une palette de couleurs naturelles, des illustrations dessinées à la main et des typographies simples mais modernes pour créer une identité visuelle qui reflète parfaitement l'atmosphère chaleureuse et authentique d'Olio e Burro.",
+    name: 'Race cars - Location',
+    cover: './img/Projet 4/Racecars 1.webp',
+    keywords: ['Branding', 'Blabla', 'Test'],
+    challenge: 'Va faloir trouver ma petite Isaure',
+    solution: 'En deux phrases idéalement, utilise chatGPT si besoin :)',
     imgs: [
-      './img/Projet 1/olio 1.webp',
-      './img/Projet 1/olio 6.webp',
-      './img/Projet 1/olio 7.webp',
-      './img/Projet 1/olio 5.webp',
-      './img/Projet 1/olio 4.webp',
-      './img/Projet 1/olio 3.webp',
-      './img/Projet 1/olio 2.webp',
+      './img/Projet 4/Racecars 1.webp',
+      './img/Projet 4/Racecars 2.webp',
+      './img/Projet 4/Racecars 3.webp',
+      './img/Projet 4/Racecars 4.webp',
     ],
-    description:
-      "Olio e Burro est un restaurant né de la rencontre d'un français et d'une italienne amoureux de leur culture. Ils proposent une cuisine locale et sans gluten qui valorise la simplicité et le savoir faire. Le couple propose des plats fait maison à partir de produits bruts.  Cette identité est une vitrine de leur singularité : elle traduit un artisanat qui se veut simple mais chaleureux. La conception de cette identité est le fruit de recherches graphiques et plastiques prolifiques autour de la cuisine.",
+    description: 'Identité graphique pour Race Cars, une entreprise de location de voiture.',
   },
   {
     name: 'Olio e Burro',
@@ -144,7 +134,6 @@ function buildProjectSection(main, section, project) {
   description.appendChild(document.createElement('p')).textContent = `${project.solution}`
 
   const button = section.appendChild(document.createElement('a'))
-  button.href = '#'
   button.classList.add('discover')
   button.textContent = 'DÉCOUVRIR'
 
