@@ -165,6 +165,15 @@ function buildProjectSection(main, section, project) {
         }, 500)
       })
 
+      if (window.innerWidth >= 1024) {
+        section.lastChild.insertAdjacentElement(
+          'afterend',
+          document.getElementsByClassName('swiper')[0]
+        )
+      } else {
+        console.log('Screen probably too small')
+      }
+
       setTimeout(() => main.classList.toggle('hidden'), 250)
     }, 500)
   })
@@ -179,6 +188,18 @@ function buildProjectSection(main, section, project) {
     const infosH2 = infos.appendChild(document.createElement('h2'))
     infosH2.textContent = `${project.name}`
   }
+
+  if (window.innerWidth >= 1024) {
+    section.lastChild.insertAdjacentElement('afterend', cover)
+  }
+
+  // if (window.innerWidth >= 1024 && main.children.length % 2 == 0) {
+  //   section.firstChild.insertAdjacentElement('beforebegin', cover)
+  // } else if (window.innerWidth >= 1024 && main.children.length % 2 !== 0) {
+  //   section.lastChild.insertAdjacentElement('afterend', cover)
+  // } else {
+  //   console.log('Screen probably too small')
+  // }
 }
 
 function projectsBuilding() {

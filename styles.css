@@ -22,7 +22,7 @@
 }
 
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
@@ -33,20 +33,24 @@ body {
 
 /* Common */
 img {
+  max-height: 100%;
   max-width: 100%;
 }
 
 .section {
   height: 100vh;
   max-width: 1500px;
-  display: grid;
-  padding: 1rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
-  justify-items: center;
-  align-content: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   scroll-snap-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 .section::before {
@@ -64,7 +68,7 @@ img {
 .section .infos {
   display: flex;
   place-items: center;
-  max-width: min(250px, 80%);
+  max-width: 300px;
 }
 
 .section .infos h1 {
@@ -79,16 +83,17 @@ img {
   font-size: 2rem;
   color: var(--accent);
   text-transform: uppercase;
+  display: inline;
+  max-width: 8ch;
+  max-width: fit-content;
 }
 
 .section .cover {
-  max-height: 33vh;
+  max-height: 25vh;
 }
 
 .section .keywords {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: min(500px, 80%);
+  display: none;
 }
 
 .section .keywords h3 {
@@ -161,41 +166,21 @@ main {
   opacity: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .section {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      'first second'
-      'third second'
-      'fourth second'
-      'fifth second';
-    margin: auto;
-    scroll-snap-align: center;
+@media screen and (min-height: 700px) {
+  .section .keywords {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: min(500px, 80%);
   }
+}
 
-  .section > * {
-    place-self: center;
-  }
-
-  .infos {
-    grid-area: first;
-  }
-
+@media screen and (min-width: 1024px) {
   .section .cover,
   .section .swiper {
-    grid-area: second;
-    max-height: 100%;
-  }
-
-  .keywords {
-    grid-area: third;
-  }
-
-  .description {
-    grid-area: fourth;
-  }
-
-  .section a {
-    grid-area: fifth;
+    height: 100%;
+    max-height: 1000px;
+    max-width: 750px;
+    /* object-fit: contain; */
+    object-fit: cover;
   }
 }
