@@ -37,7 +37,7 @@ const data = [
       './img/Projet 1/olio 2.webp',
     ],
     description:
-      "Olio e Burro est un restaurant né de la rencontre d'un français et d'une italienne amoureux de leur culture. Ils proposent une cuisine locale et sans gluten qui valorise la simplicité et le savoir faire. Le couple propose des plats fait maison à partir de produits bruts.  Cette identité est une vitrine de leur singularité : elle traduit un artisanat qui se veut simple mais chaleureux. La conception de cette identité est le fruit de recherches graphiques et plastiques prolifiques autour de la cuisine.",
+      "Olio e Burro est un restaurant né de la rencontre d'un français et d'une italienne amoureux de leur culture. Ils proposent une cuisine locale et sans gluten qui valorise la simplicité et le savoir faire. Le couple propose des plats fait maison à partir de produits bruts. C'est un endroit idéal pour les amateurs de cuisine italienne à la recherche d'ingrédients authentiques. ",
   },
   {
     name: 'Pannonica',
@@ -53,11 +53,11 @@ const data = [
       './img/Projet 2/Pannonica 3.webp',
     ],
     description:
-      "Refonte de l'identité de la scène de jazz et de musiques improvisées à Nantes. L'identité doit être sobre et élégante tout en étant aisément idéntifiable. Le logotype en monochromie est constitué d'une typographie incisive qui réprésente les variations sonores. Maquette web et déclinaisons sur différents supports numériques et pour une revue saisonnière.",
+      "Pannonica est une scène de jazz et de musiques improvisées située à Nantes, en France. Elle propose une programmation régulière de concerts, d'expositions et de rencontres avec des artistes locaux et internationaux. C'est un lieu incontournable pour les amateurs de jazz et de musique expérimentale à Nantes.",
   },
   {
     name: 'Parc Oriental Maulévrier',
-    cover: './img/Projet 3/Maulévrier 8.webp',
+    cover: './img/Projet 3/Maulévrier 1.webp',
     keywords: ['Branding', 'Illustration'],
     challenge:
       "Concevoir un flyer qui soit compact et ludique, tout en offrant une grande quantité d'informations de manière intuitive en respectant le style local.",
@@ -93,7 +93,7 @@ const data = [
       './img/Projet 4/Racecars 4.webp',
     ],
     description:
-      "Entre vitesse et luxe, Race cars est une entreprise qui propose des véhicules haut de gamme à la location. Il s'agit d'imaginer une identité visuelle qui saura marquer les esprits et améliorer leur visibilité. Le logotype se veut sobre et élégant. A la frontière entre le blason automobile et le tampon minimaliste, l'identité souligne les produits haut de gamme que propose l'entreprise. La typographie est découpée de manière à évoquer la vitesse et le dynamisme de leurs modèles.",
+      "RaceCars Location est une entreprise de location de voitures de sport et de prestige située à Nantes, en France. Elle propose une flotte de véhicules haut de gamme, tels que des Ferrari, Lamborghini et Porsche, pour des événements spéciaux ou des sorties de loisirs. C'est un choix idéal pour les amateurs de voitures de luxe cherchant une expérience de conduite unique.",
   },
   {
     name: 'Olio e Burro',
