@@ -9,7 +9,7 @@
 }
 
 :root {
-  --accent: #0000ff;
+  --accent: hsl(240, 100%, 50%);
   --swiper-theme-color: #0000ff;
   --primary: #313131;
   --secondary: #616161;
@@ -29,6 +29,19 @@ html {
 body {
   font-family: 'Aktiv Grotesk';
   color: var(--primary);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+  z-index: -1;
+  background: url('./img/background.webp');
 }
 
 /* Common */
@@ -51,18 +64,6 @@ img {
   scroll-snap-align: center;
   position: relative;
   overflow: hidden;
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-  z-index: -1;
-  background: url('./img/background.webp');
 }
 
 .section .infos {
@@ -123,6 +124,7 @@ img {
   border-radius: 20px;
   font-weight: bold;
   border: 2px solid var(--accent);
+  box-shadow: 2px 2px 10px -2px hsla(240, 100%, 50%, 0.7);
   transition: background-color 0.25s, color 0.25s;
 }
 
@@ -141,6 +143,7 @@ img {
 /* Swiper */
 .swiper {
   height: 350px;
+  width: 100%;
 }
 
 .swiper-slide {
@@ -178,9 +181,16 @@ main {
   .section .cover,
   .section .swiper {
     height: 100%;
-    max-height: 1000px;
-    max-width: 750px;
-    /* object-fit: contain; */
-    object-fit: cover;
+    max-height: 750px;
+    max-width: 50vw;
+    /* max-width: 775px; */
+    object-fit: contain;
+    /* object-fit: cover; */
+  }
+
+  .section .cover {
+    box-shadow: 2px 2px 25px -10px #131313;
+    /* background-color: var(--secondary); */
+    border-radius: 5px;
   }
 }

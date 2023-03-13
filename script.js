@@ -46,7 +46,7 @@ const data = [
     challenge:
       "Une refonte de l'identité visuelle à la fois sobre et élégante, mais également facilement identifiable pour la scène de jazz et de musiques improvisées à Nantes.",
     solution:
-      "Créaton d'une maquette web et d'une revue saisonnière pour mettre en valeur l'identité visuelle, en la déclinant sur différents supports pour toucher un public plus large et promouvoir cette scène musicale dynamique et innovante. ",
+      "Création d'une maquette web et d'une revue saisonnière pour mettre en valeur l'identité visuelle, en la déclinant sur différents supports pour toucher un public plus large et promouvoir cette scène musicale dynamique et innovante. ",
     imgs: [
       './img/Projet 2/Pannonica 1.webp',
       './img/Projet 2/Pannonica 2.webp',
@@ -56,38 +56,44 @@ const data = [
       "Refonte de l'identité de la scène de jazz et de musiques improvisées à Nantes. L'identité doit être sobre et élégante tout en étant aisément idéntifiable. Le logotype en monochromie est constitué d'une typographie incisive qui réprésente les variations sonores. Maquette web et déclinaisons sur différents supports numériques et pour une revue saisonnière.",
   },
   {
-    name: 'Race cars - Location',
+    name: 'Parc Oriental Maulévrier',
+    cover: './img/Projet 3/Maulévrier 8.webp',
+    keywords: ['Branding', 'Illustration'],
+    challenge:
+      "Concevoir un flyer qui soit compact et ludique, tout en offrant une grande quantité d'informations de manière intuitive en respectant le style local.",
+    solution:
+      "Un flyer inspiré des cartes de métro, dépliable pour fournir un plan clair et complet du parc, ainsi que des informations pratiques et historiques sur le lieu. L'identité visuelle a été conçue pour refléter la diversité de la végétation, permettant aux visiteurs de se repérer facilement dans le parc et d'apprécier sa beauté tout en ayant accès à toutes les informations nécessaires.",
+    imgs: [
+      './img/Projet 3/Maulévrier 1.webp',
+      './img/Projet 3/Maulévrier 8.webp',
+      './img/Projet 3/Maulévrier 2.webp',
+      './img/Projet 3/Maulévrier 3.webp',
+      './img/Projet 3/Maulévrier 4.webp',
+      './img/Projet 3/Maulévrier 5.webp',
+      './img/Projet 3/Maulévrier 6.webp',
+      './img/Projet 3/Maulévrier 7.webp',
+      './img/Projet 3/Maulévrier 9.webp',
+      './img/Projet 3/Maulévrier 10.webp',
+    ],
+    description:
+      "Le Parc Oriental de Maulévrier est un jardin botanique japonais créé en 1899 par Alexander Marcel, un industriel passionné de botanique et d'arts asiatiques. S'étendant sur plus de 29 hectares, il contient plus de 300 espèces végétales venues du Japon, de Chine et de Corée, ainsi que de nombreux éléments traditionnels de l'art de vivre japonais tels que des ponts, des lanternes, des pagodes et des pavillons.",
+  },
+  {
+    name: 'Race cars Location',
     cover: './img/Projet 4/Racecars 1.webp',
     keywords: ['Branding', 'Blabla', 'Test'],
-    challenge: 'Va faloir trouver ma petite Isaure',
-    solution: 'En deux phrases idéalement, utilise chatGPT si besoin :)',
+    challenge:
+      "Créer une identité visuelle qui doit être à la fois élégante et dynamique pour représenter Race cars et sa proposition de voitures haut de gamme et attirer l'attention de clients potentiels.",
+    solution:
+      'Un logotype sobre et élégant qui rappelle les blasons automobiles, tout en étant minimaliste. La typographie est découpée de manière à donner une impression de vitesse et de dynamisme, soulignant ainsi la qualité supérieure des véhicules proposés par Race cars.',
     imgs: [
       './img/Projet 4/Racecars 1.webp',
       './img/Projet 4/Racecars 2.webp',
       './img/Projet 4/Racecars 3.webp',
       './img/Projet 4/Racecars 4.webp',
     ],
-    description: 'Identité graphique pour Race Cars, une entreprise de location de voiture.',
-  },
-  {
-    name: 'Olio e Burro',
-    cover: './img/gallery/olio e burro.webp',
-    keywords: ['Branding', 'Illustration'],
-    challenge:
-      "Trouver l'équilibre entre l'aspect artisanal et moderne, tout en transmettant la simplicité et le savoir-faire de leur cuisine avec une identité visuelle élégante et contemporaine pour attirer les clients.",
-    solution:
-      "Une palette de couleurs naturelles, des illustrations dessinées à la main et des typographies simples mais modernes pour créer une identité visuelle qui reflète parfaitement l'atmosphère chaleureuse et authentique d'Olio e Burro.",
-    imgs: [
-      './img/Projet 1/olio 1.webp',
-      './img/Projet 1/olio 6.webp',
-      './img/Projet 1/olio 7.webp',
-      './img/Projet 1/olio 5.webp',
-      './img/Projet 1/olio 4.webp',
-      './img/Projet 1/olio 3.webp',
-      './img/Projet 1/olio 2.webp',
-    ],
     description:
-      "Olio e Burro est un restaurant né de la rencontre d'un français et d'une italienne amoureux de leur culture. Ils proposent une cuisine locale et sans gluten qui valorise la simplicité et le savoir faire. Le couple propose des plats fait maison à partir de produits bruts.  Cette identité est une vitrine de leur singularité : elle traduit un artisanat qui se veut simple mais chaleureux. La conception de cette identité est le fruit de recherches graphiques et plastiques prolifiques autour de la cuisine.",
+      "Entre vitesse et luxe, Race cars est une entreprise qui propose des véhicules haut de gamme à la location. Il s'agit d'imaginer une identité visuelle qui saura marquer les esprits et améliorer leur visibilité. Le logotype se veut sobre et élégant. A la frontière entre le blason automobile et le tampon minimaliste, l'identité souligne les produits haut de gamme que propose l'entreprise. La typographie est découpée de manière à évoquer la vitesse et le dynamisme de leurs modèles.",
   },
   {
     name: 'Olio e Burro',
@@ -128,10 +134,9 @@ function buildProjectSection(main, section, project) {
   const description = section.appendChild(document.createElement('div'))
   description.classList.add('description')
 
-  description.appendChild(document.createElement('h4')).textContent = 'Le Challenge'
-  description.appendChild(document.createElement('p')).textContent = `${project.challenge}`
-  description.appendChild(document.createElement('h4')).textContent = 'Ma Solution'
-  description.appendChild(document.createElement('p')).textContent = `${project.solution}`
+  description.appendChild(document.createElement('h4')).textContent = 'Le Client'
+  const projetDescP = description.appendChild(document.createElement('p'))
+  projetDescP.textContent = `${project.description}`
 
   const button = section.appendChild(document.createElement('a'))
   button.classList.add('discover')
@@ -148,11 +153,10 @@ function buildProjectSection(main, section, project) {
 
       const projetDesc = section.appendChild(document.createElement('div'))
       projetDesc.classList.add('description')
-
-      projetDesc.appendChild(document.createElement('h4')).textContent = 'Le Client'
-
-      const projetDescP = projetDesc.appendChild(document.createElement('p'))
-      projetDescP.textContent = `${project.description}`
+      projetDesc.appendChild(document.createElement('h4')).textContent = 'Le Challenge'
+      projetDesc.appendChild(document.createElement('p')).textContent = `${project.challenge}`
+      projetDesc.appendChild(document.createElement('h4')).textContent = 'Ma Solution'
+      projetDesc.appendChild(document.createElement('p')).textContent = `${project.solution}`
 
       const retour = section.appendChild(document.createElement('a'))
       retour.textContent = 'RETOUR'
@@ -192,14 +196,6 @@ function buildProjectSection(main, section, project) {
   if (window.innerWidth >= 1024) {
     section.lastChild.insertAdjacentElement('afterend', cover)
   }
-
-  // if (window.innerWidth >= 1024 && main.children.length % 2 == 0) {
-  //   section.firstChild.insertAdjacentElement('beforebegin', cover)
-  // } else if (window.innerWidth >= 1024 && main.children.length % 2 !== 0) {
-  //   section.lastChild.insertAdjacentElement('afterend', cover)
-  // } else {
-  //   console.log('Screen probably too small')
-  // }
 }
 
 function projectsBuilding() {
@@ -253,9 +249,8 @@ function populateSwiperWrapper(project) {
 
 function initSwiper() {
   return new Swiper('.swiper', {
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     centeredSlides: true,
-    // spaceBetween: 30,
     grabCursor: true,
     freeMode: {
       enabled: true,
