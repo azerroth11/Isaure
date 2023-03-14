@@ -1,22 +1,22 @@
-// const data = [
-//   [{ name: 'affiche processus', format: '1/2' }],
-//   [{ name: 'divingWoman', format: '1/2' }],
-//   [{ name: 'isolated posters', format: '1/2' }],
-//   [{ name: 'couverture mémoire', format: '1/2' }],
-//   [{ name: 'bonhomme geometrique', format: '1/2' }],
-//   [{ name: 'PFCP', format: '1/2' }],
-//   [{ name: 'la danse des oiseaux', format: '1/2' }],
-//   [{ name: 'maulevrier', format: '1/2' }],
-//   [{ name: 'visage noir et blanc', format: '1/2' }],
-//   [{ name: 'olio e burro', format: '1/2' }],
-//   [{ name: 'panonica', format: '1/2' }],
-//   [{ name: 'fanzine', format: '1/2' }],
-//   [{ name: 'savon 1', format: '1/2' }],
-//   [{ name: 'oeil', format: '1/2' }],
-//   [{ name: 'vélo sport', format: '2/1' }],
-//   [{ name: 'workshop typo', format: '2/1' }],
-//   [{ name: 'bal des pompiers', format: '2/1' }],
-// ]
+const galleryData = [
+  [{ name: 'affiche processus', format: '1/2' }],
+  [{ name: 'divingWoman', format: '1/2' }],
+  [{ name: 'isolated posters', format: '1/2' }],
+  [{ name: 'couverture mémoire', format: '1/2' }],
+  [{ name: 'bonhomme geometrique', format: '1/2' }],
+  [{ name: 'workshop typo', format: '2/1' }],
+  [{ name: 'vélo sport', format: '2/1' }],
+  [{ name: 'PFCP', format: '1/2' }],
+  [{ name: 'la danse des oiseaux', format: '1/2' }],
+  // [{ name: 'maulevrier', format: '1/2' }],
+  // [{ name: 'visage noir et blanc', format: '1/2' }],
+  [{ name: 'olio e burro', format: '1/2' }],
+  // [{ name: 'panonica', format: '1/2' }],
+  [{ name: 'fanzine', format: '1/2' }],
+  [{ name: 'savon 1', format: '1/2' }],
+  // [{ name: 'oeil', format: '1/2' }],
+  [{ name: 'bal des pompiers', format: '2/1' }],
+]
 
 const data = [
   {
@@ -225,6 +225,32 @@ function projectsBuilding() {
     const section = main.appendChild(document.createElement('div'))
     section.classList.add(`project${data.indexOf(project) + 1}`, 'section')
     buildProjectSection(main, section, project)
+  })
+  const contactDiv = main.appendChild(document.createElement('div'))
+  contactDiv.classList.add('contactDiv', 'section')
+  const contactContainer = contactDiv.appendChild(document.createElement('div'))
+  contactContainer.classList.add('contactContainer')
+  const contactIMG = contactContainer.appendChild(document.createElement('img'))
+  contactIMG.src = './img/gallery/visage noir et blanc.webp'
+  const contactInfos = contactContainer.appendChild(document.createElement('div'))
+  contactInfos.classList.add('contactInfos')
+  contactInfos.appendChild(document.createElement('h1')).textContent = 'Un projet en tête ? '
+  contactInfos.appendChild(document.createElement('h3')).textContent =
+    "Si vous souhaitez discuter de votre projet ou simplement me dire bonjour, n'hésitez pas à me contacter par e-mail: "
+  const contactBTN = contactInfos.appendChild(document.createElement('a'))
+  contactBTN.href = 'test@gmail.com'
+  contactBTN.textContent = 'CONTACTEZ-MOI'
+  contactContainer.appendChild(document.createElement('h3')).textContent =
+    'Curieux de découvrir davantage de mes projets réalisés sur les trois dernières années ?'
+  contactContainer.appendChild(document.createElement('img')).src = './img/arrow-diagonal.svg'
+  const galleryContainer = main.appendChild(document.createElement('div'))
+  galleryContainer.classList.add('galleryContainer', 'section')
+  const gallery = galleryContainer.appendChild(document.createElement('div'))
+  gallery.setAttribute('id', 'gallery')
+
+  galleryData.forEach((galleryIMG) => {
+    const img = gallery.appendChild(document.createElement('img'))
+    img.src = `./img/gallery/${galleryIMG[0].name}.webp`
   })
 }
 projectsBuilding()
