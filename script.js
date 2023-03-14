@@ -42,7 +42,7 @@ const data = [
   {
     name: 'Pannonica',
     cover: './img/Projet 2/Pannonica 1.webp',
-    keywords: ['Identité', 'Website'],
+    keywords: ['Identité visuelle', 'Édition', 'Web'],
     challenge:
       "Une refonte de l'identité visuelle à la fois sobre et élégante, mais également facilement identifiable pour la scène de jazz et de musiques improvisées à Nantes.",
     solution:
@@ -58,11 +58,11 @@ const data = [
   {
     name: 'Parc Oriental Maulévrier',
     cover: './img/Projet 3/Maulévrier 1.webp',
-    keywords: ['Branding', 'Illustration'],
+    keywords: ['Édition', 'Identité visuelle'],
     challenge:
-      "Concevoir un flyer qui soit compact et ludique, tout en offrant une grande quantité d'informations de manière intuitive en respectant le style local.",
+      "Concevoir un flyer qui soit compact et ludique, pour faciliter la déambulation des visiteurs. Il doit offrir une grande quantité d'informations de manière intuitive en respectant le style local.",
     solution:
-      "Un flyer inspiré des cartes de métro, dépliable pour fournir un plan clair et complet du parc, ainsi que des informations pratiques et historiques sur le lieu. L'identité visuelle a été conçue pour refléter la diversité de la végétation, permettant aux visiteurs de se repérer facilement dans le parc et d'apprécier sa beauté tout en ayant accès à toutes les informations nécessaires.",
+      "Inspiré par les cartes de métro, le support choisi est dépliable afin de présenter un plan du parc complet et lisible au recto et les informations au verso. Le flyer du parc recense les informations pratiques du lieu et son histoire. L'identité visuelle est à l'image de la diversité de la végétation.",
     imgs: [
       // './img/Projet 3/Maulévrier 1.webp',
       './img/Projet 3/Maulévrier 8.webp',
@@ -81,7 +81,7 @@ const data = [
   {
     name: 'Race cars Location',
     cover: './img/Projet 4/Racecars 1.webp',
-    keywords: ['Branding', 'Blabla', 'Test'],
+    keywords: ['Identité visuelle', 'Branding'],
     challenge:
       "Créer une identité visuelle qui doit être à la fois élégante et dynamique pour représenter Race cars et sa proposition de voitures haut de gamme et attirer l'attention de clients potentiels.",
     solution:
