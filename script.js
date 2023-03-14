@@ -22,7 +22,7 @@ const data = [
   {
     name: 'Olio e Burro',
     cover: './img/gallery/olio e burro.webp',
-    keywords: ['Branding', 'Illustration'],
+    keywords: ['Branding', 'Illustration', 'Web'],
     challenge:
       "Trouver l'équilibre entre l'aspect artisanal et moderne, tout en transmettant la simplicité et le savoir-faire de leur cuisine avec une identité visuelle élégante et contemporaine pour attirer les clients.",
     solution:
@@ -64,16 +64,16 @@ const data = [
     solution:
       "Inspiré par les cartes de métro, le support choisi est dépliable afin de présenter un plan du parc complet et lisible au recto et les informations au verso. Le flyer du parc recense les informations pratiques du lieu et son histoire. L'identité visuelle est à l'image de la diversité de la végétation.",
     imgs: [
-      // './img/Projet 3/Maulévrier 1.webp',
-      './img/Projet 3/Maulévrier 8.webp',
-      './img/Projet 3/Maulévrier 2.webp',
-      './img/Projet 3/Maulévrier 9.webp',
-      './img/Projet 3/Maulévrier 10.webp',
+      './img/Projet 3/Maulévrier 1.webp',
+      // './img/Projet 3/Maulévrier 8.webp',
+      // './img/Projet 3/Maulévrier 2.webp',
+      // './img/Projet 3/Maulévrier 9.webp',
+      // './img/Projet 3/Maulévrier 10.webp',
       // './img/Projet 3/Maulévrier 3.webp',
-      './img/Projet 3/Maulévrier 4.webp',
-      './img/Projet 3/Maulévrier 5.webp',
-      './img/Projet 3/Maulévrier 6.webp',
-      './img/Projet 3/Maulévrier 7.webp',
+      // './img/Projet 3/Maulévrier 4.webp',
+      // './img/Projet 3/Maulévrier 5.webp',
+      // './img/Projet 3/Maulévrier 6.webp',
+      // './img/Projet 3/Maulévrier 7.webp',
     ],
     description:
       "Le Parc Oriental de Maulévrier est un jardin botanique japonais créé en 1899 par Alexander Marcel, un industriel passionné de botanique et d'arts asiatiques. S'étendant sur plus de 29 hectares, il contient plus de 300 espèces végétales venues du Japon, de Chine et de Corée, ainsi que de nombreux éléments traditionnels de l'art de vivre japonais tels que des ponts, des lanternes, des pagodes et des pavillons.",
@@ -107,7 +107,7 @@ const data = [
       './img/Projet 5/Inktober 4.webp',
       './img/Projet 5/Inktober 3.webp',
       // './img/Projet 5/Inktober 5.webp',
-      // './img/Projet 5/Inktober 6.webp',
+      './img/Projet 5/Inktober 6.webp',
       './img/Projet 5/Inktober 7.webp',
     ],
     description: 'Réalisation de dessins à l’encre à l’occasion du challenge Inktober 2021.',
@@ -214,7 +214,9 @@ function buildProjectSection(main, section, project) {
     const imgContainer = section.appendChild(document.createElement('div'))
     imgContainer.classList.add('imgContainer')
     project.imgs.forEach((img) => {
-      imgContainer.appendChild(document.createElement('img')).src = img
+      const imgElem = imgContainer.appendChild(document.createElement('img'))
+      imgElem.src = img
+      imgElem.setAttribute('onclick', 'magnify(this)')
     })
   }
 }
@@ -315,4 +317,29 @@ function initSwiper() {
       clickable: true,
     },
   })
+}
+
+function magnify(img) {
+  const modal = document.createElement('div')
+  modal.classList.toggle('hidden')
+  modal.classList.add('magnifyModal')
+  document.body.appendChild(modal)
+
+  const modalContent = document.createElement('div')
+  modalContent.classList.add('magnifyModalContent')
+  modal.appendChild(modalContent)
+
+  const magnifiedImage = document.createElement('img')
+  magnifiedImage.src = img.src
+  modalContent.appendChild(magnifiedImage)
+  setTimeout(() => {
+    modal.classList.toggle('hidden')
+  }, 0)
+
+  modal.onclick = function () {
+    modal.classList.toggle('hidden')
+    setTimeout(() => {
+      document.body.removeChild(modal)
+    }, 250)
+  }
 }
