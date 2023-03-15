@@ -29,12 +29,12 @@ const data = [
       "Une palette de couleurs naturelles, des illustrations dessinées à la main et des typographies simples mais modernes pour créer une identité visuelle qui reflète parfaitement l'atmosphère chaleureuse et authentique d'Olio e Burro.",
     imgs: [
       './img/Projet 1/olio 1.webp',
+      './img/Projet 1/olio 2.webp',
       './img/Projet 1/olio 6.webp',
       './img/Projet 1/olio 7.webp',
-      './img/Projet 1/olio 5.webp',
+      // './img/Projet 1/olio 5.webp',
       // './img/Projet 1/olio 4.webp',
       // './img/Projet 1/olio 3.webp',
-      // './img/Projet 1/olio 2.webp',
     ],
     description:
       "Olio e Burro est un restaurant né de la rencontre d'un français et d'une italienne amoureux de leur culture. Ils proposent une cuisine locale et sans gluten qui valorise la simplicité et le savoir faire. Le couple propose des plats fait maison à partir de produits bruts. C'est un endroit idéal pour les amateurs de cuisine italienne à la recherche d'ingrédients authentiques. ",
