@@ -80,7 +80,7 @@ const data = [
   },
   {
     name: 'PCFP',
-    cover: './img/Projet 4/Racecars 1.webp',
+    cover: './img/Projet 4/PCFP 01.webp',
     keywords: ['Identité visuelle', 'Branding'],
     challenge:
       'Créer un logo simple et facilement identifiable pour représenter un organisme qui offre des services de préparation aux examens du secteur public.',
