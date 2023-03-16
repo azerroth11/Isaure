@@ -171,7 +171,7 @@ img {
 .imgContainer img {
   height: 100%;
   object-fit: cover;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .imgContainer img:hover,
@@ -216,30 +216,34 @@ img {
 
 /* Contact */
 .contactDiv {
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
 }
 
 .contactDiv .contactContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10vw;
   align-items: center;
   max-width: 900px;
 }
 
-.contactDiv img {
-  max-height: 50vh;
+.contactDiv .contactContainer img:first-of-type,
+.contactDiv .contactContainer .contactInfos {
+  margin: auto;
+}
+
+.contactDiv .contactContainer > img {
+  max-height: 40vh;
   max-width: 50%;
   object-fit: contain;
 }
 
 .contactDiv .contactInfos {
   display: grid;
-  gap: 2rem;
+  gap: 2.5vh;
   place-content: center;
-  height: 100%;
-  max-width: 50ch;
+  max-width: 35ch;
   text-align: center;
 }
 
@@ -248,18 +252,18 @@ img {
   margin: 0 auto;
 }
 
-.contactContainer > h3 {
+/* .contactContainer h3 {
   width: 100%;
-  margin: 3rem auto 0 auto;
   text-align: center;
-}
+  position: relative;
+} */
 
 .contactContainer img:last-child {
   max-width: 40px;
   position: absolute;
-  bottom: 5rem;
+  bottom: 5vh;
   left: 50%;
-  transform: rotate(45deg);
+  transform: rotate(90deg) translateY(50%);
 }
 
 /* Gallery */

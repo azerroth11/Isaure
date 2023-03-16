@@ -242,14 +242,15 @@ function projectsBuilding() {
   const contactInfos = contactContainer.appendChild(document.createElement('div'))
   contactInfos.classList.add('contactInfos')
   contactInfos.appendChild(document.createElement('h1')).textContent = 'Un projet en tête ? '
-  contactInfos.appendChild(document.createElement('h3')).textContent =
+  contactInfos.appendChild(document.createElement('p')).textContent =
     "Si vous souhaitez discuter de votre projet ou simplement me dire bonjour, n'hésitez pas à me contacter par e-mail: "
   const contactBTN = contactInfos.appendChild(document.createElement('a'))
   contactBTN.href = 'test@gmail.com'
   contactBTN.textContent = 'CONTACTEZ-MOI'
-  contactContainer.appendChild(document.createElement('h3')).textContent =
-    'Curieux de découvrir davantage de mes projets réalisés sur les trois dernières années ?'
-  contactContainer.appendChild(document.createElement('img')).src = './img/arrow-diagonal.svg'
+  // const discoverMore = contactContainer.appendChild(document.createElement('h3'))
+  // discoverMore.textContent =
+  //   'Curieux de découvrir davantage de mes projets réalisés sur les trois dernières années ?'
+  contactContainer.appendChild(document.createElement('img')).src = './img/fleche.svg'
 
   // Gallery
   const galleryContainer = main.appendChild(document.createElement('div'))
