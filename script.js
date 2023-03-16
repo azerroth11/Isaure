@@ -1,24 +1,21 @@
 const galleryData = [
   [{ name: 'divingWoman', format: '1/2' }],
-  [{ name: 'affiche processus', format: '1/2' }],
-  [{ name: 'savon 1', format: '1/2' }],
+  [{ name: 'PFCP', format: '1/2' }],
+  [{ name: 'la danse des oiseaux', format: '1/2' }],
   [{ name: 'vélo sport', format: '2/1' }],
-  [{ name: 'isolated posters', format: '1/2' }],
   [{ name: 'couverture mémoire', format: '1/2' }],
+  [{ name: 'isolated posters', format: '1/2' }],
   [{ name: 'bonhomme geometrique', format: '1/2' }],
   [{ name: 'bal des pompiers', format: '2/1' }],
-
   // [{ name: 'visage noir et blanc', format: '1/2' }],
   // [{ name: 'olio e burro', format: '1/2' }],
   // [{ name: 'panonica', format: '1/2' }],
-
   [{ name: 'workshop typo', format: '2/1' }],
-
-  [{ name: 'oeil', format: '1/2' }],
-  [{ name: 'maulevrier', format: '1/2' }],
+  // [{ name: 'oeil', format: '1/2' }],
   [{ name: 'fanzine', format: '1/2' }],
-  [{ name: 'PFCP', format: '1/2' }],
-  [{ name: 'la danse des oiseaux', format: '1/2' }],
+  // [{ name: 'maulevrier', format: '1/2' }],
+  [{ name: 'affiche processus', format: '1/2' }],
+  [{ name: 'savon 1', format: '1/2' }],
 ]
 
 const data = [
@@ -82,21 +79,20 @@ const data = [
       "Le Parc Oriental de Maulévrier est un jardin botanique japonais créé en 1899 par Alexander Marcel, un industriel passionné de botanique et d'arts asiatiques. S'étendant sur plus de 29 hectares, il contient plus de 300 espèces végétales venues du Japon, de Chine et de Corée, ainsi que de nombreux éléments traditionnels de l'art de vivre japonais tels que des ponts, des lanternes, des pagodes et des pavillons.",
   },
   {
-    name: 'Race cars Location',
+    name: 'PCFP',
     cover: './img/Projet 4/Racecars 1.webp',
     keywords: ['Identité visuelle', 'Branding'],
     challenge:
-      "Créer une identité visuelle qui doit être à la fois élégante et dynamique pour représenter Race cars et sa proposition de voitures haut de gamme et attirer l'attention de clients potentiels.",
+      'Créer un logo simple et facilement identifiable pour représenter un organisme qui offre des services de préparation aux examens du secteur public.',
     solution:
-      'Un logotype sobre et élégant qui rappelle les blasons automobiles, tout en étant minimaliste. La typographie est découpée de manière à donner une impression de vitesse et de dynamisme, soulignant ainsi la qualité supérieure des véhicules proposés par Race cars.',
+      "Un logo monochrome composé uniquement d'éléments typographiques. Cette approche de conception permet d'obtenir une esthétique simple et épurée qui reflète l'essence de la mission de l'entreprise.",
     imgs: [
-      './img/Projet 4/Racecars 1.webp',
-      './img/Projet 4/Racecars 2.webp',
-      // './img/Projet 4/Racecars 3.webp',
-      './img/Projet 4/Racecars 4.webp',
+      './img/Projet 4/PCFP 01.webp',
+      './img/Projet 4/PCFP 02.webp',
+      './img/Projet 4/PCFP 03.webp',
     ],
     description:
-      "RaceCars Location est une entreprise de location de voitures de sport et de prestige située à Nantes, en France. Elle propose une flotte de véhicules haut de gamme, tels que des Ferrari, Lamborghini et Porsche, pour des événements spéciaux ou des sorties de loisirs. C'est un choix idéal pour les amateurs de voitures de luxe cherchant une expérience de conduite unique.",
+      "L'organisme Préparation au Concours de la Fonction Publique propose des modules de cours pour préparer ses clients aux concours de la fonction publique.",
   },
   {
     name: 'Inktober',
@@ -132,7 +128,7 @@ function buildProjectSection(main, section, project) {
   }
   createProjectName()
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1200) {
     const cover = section.appendChild(document.createElement('img'))
     cover.classList.add('cover')
     cover.src = `${project.cover}`
