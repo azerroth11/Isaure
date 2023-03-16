@@ -1,21 +1,24 @@
 const galleryData = [
-  [{ name: 'affiche processus', format: '1/2' }],
   [{ name: 'divingWoman', format: '1/2' }],
+  [{ name: 'affiche processus', format: '1/2' }],
+  [{ name: 'savon 1', format: '1/2' }],
+  [{ name: 'vélo sport', format: '2/1' }],
   [{ name: 'isolated posters', format: '1/2' }],
   [{ name: 'couverture mémoire', format: '1/2' }],
   [{ name: 'bonhomme geometrique', format: '1/2' }],
+  [{ name: 'bal des pompiers', format: '2/1' }],
+
+  // [{ name: 'visage noir et blanc', format: '1/2' }],
+  // [{ name: 'olio e burro', format: '1/2' }],
+  // [{ name: 'panonica', format: '1/2' }],
+
   [{ name: 'workshop typo', format: '2/1' }],
-  [{ name: 'vélo sport', format: '2/1' }],
+
+  [{ name: 'oeil', format: '1/2' }],
+  [{ name: 'maulevrier', format: '1/2' }],
+  [{ name: 'fanzine', format: '1/2' }],
   [{ name: 'PFCP', format: '1/2' }],
   [{ name: 'la danse des oiseaux', format: '1/2' }],
-  // [{ name: 'maulevrier', format: '1/2' }],
-  // [{ name: 'visage noir et blanc', format: '1/2' }],
-  [{ name: 'olio e burro', format: '1/2' }],
-  // [{ name: 'panonica', format: '1/2' }],
-  [{ name: 'fanzine', format: '1/2' }],
-  [{ name: 'savon 1', format: '1/2' }],
-  // [{ name: 'oeil', format: '1/2' }],
-  [{ name: 'bal des pompiers', format: '2/1' }],
 ]
 
 const data = [
@@ -99,8 +102,10 @@ const data = [
     name: 'Inktober',
     cover: './img/Projet 5/Inktober 1.webp',
     keywords: ['Illustration'],
-    challenge: '',
-    solution: '',
+    challenge:
+      "Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021. Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021.",
+    solution:
+      "Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021. Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021.",
     imgs: [
       './img/Projet 5/Inktober 2.webp',
       './img/Projet 5/Inktober 1.webp',
@@ -110,7 +115,7 @@ const data = [
       './img/Projet 5/Inktober 6.webp',
       './img/Projet 5/Inktober 7.webp',
     ],
-    description: 'Réalisation de dessins à l’encre à l’occasion du challenge Inktober 2021.',
+    description: "Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021.",
   },
 ]
 
@@ -245,6 +250,8 @@ function projectsBuilding() {
   contactContainer.appendChild(document.createElement('h3')).textContent =
     'Curieux de découvrir davantage de mes projets réalisés sur les trois dernières années ?'
   contactContainer.appendChild(document.createElement('img')).src = './img/arrow-diagonal.svg'
+
+  // Gallery
   const galleryContainer = main.appendChild(document.createElement('div'))
   galleryContainer.classList.add('galleryContainer', 'section')
   const gallery = galleryContainer.appendChild(document.createElement('div'))
@@ -253,6 +260,9 @@ function projectsBuilding() {
   galleryData.forEach((galleryIMG) => {
     const img = gallery.appendChild(document.createElement('img'))
     img.src = `./img/gallery/${galleryIMG[0].name}.webp`
+    if (galleryIMG[0].format == '2/1') {
+      img.classList.add('horizontal')
+    }
   })
 }
 projectsBuilding()
