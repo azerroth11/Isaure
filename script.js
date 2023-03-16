@@ -99,9 +99,9 @@ const data = [
     cover: './img/Projet 5/Inktober 1.webp',
     keywords: ['Illustration'],
     challenge:
-      "Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021. Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021.",
+      "Il s'agit de dessiner chaque jour pendant le mois d'octobre selon le thème indiqué par la liste officielle. Cette liste varie d'année en année.",
     solution:
-      "Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021. Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021.",
+      "Ces visuels, extraits de ma série d'inktober de 2021, ont été dessinés en noir et blanc et à l'encre.",
     imgs: [
       './img/Projet 5/Inktober 2.webp',
       './img/Projet 5/Inktober 1.webp',
@@ -111,7 +111,8 @@ const data = [
       './img/Projet 5/Inktober 6.webp',
       './img/Projet 5/Inktober 7.webp',
     ],
-    description: "Réalisation de dessins à l'encre à l'occasion du challenge Inktober 2021.",
+    description:
+      "Réalisation de dessins à l'encre à l'occasion d'Inktober 2021. Inktober est un challenge créé par Jake Parker en 2009 qui permet d'améliorer rapidement ses compétences en dessin à main levée. C'est aussi une occasion de développer un style illustratif personnel.",
   },
 ]
 
