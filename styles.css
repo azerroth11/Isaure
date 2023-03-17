@@ -197,7 +197,7 @@ img {
 
 .project5 .imgContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, calc(100% / 3 - 0.5rem)));
+  grid-template-columns: repeat(auto-fit, minmax(210px, calc(100% / 3 - 0.5rem)));
   grid-auto-rows: 50%;
   grid-auto-flow: dense;
 }
