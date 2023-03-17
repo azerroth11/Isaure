@@ -55,8 +55,7 @@ img {
   align-items: center;
   gap: 1rem;
   /* border: 1px solid red; */
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-align: center;
   position: relative;
   overflow: hidden;
 }
@@ -90,14 +89,6 @@ img {
 
 .section .keywords {
   display: none;
-}
-
-.section .keywords h3 {
-  border: 2px solid var(--accent);
-  border-radius: 20px;
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
-  color: var(--secondary);
 }
 
 .section .description h4 {
@@ -184,7 +175,7 @@ img {
 }
 
 .project1 .imgContainer img:nth-child(1) {
-  grid-column: span 2;
+  /* grid-column: span 2; */
   box-shadow: none;
   width: 100%;
   object-fit: contain;
@@ -273,7 +264,8 @@ img {
 .galleryContainer {
   max-height: none;
   height: fit-content;
-  max-width: 100%;
+  max-width: 100vw;
+  margin-bottom: 0;
 }
 
 #gallery {
@@ -341,7 +333,16 @@ main {
   .section .keywords {
     display: flex;
     flex-wrap: wrap;
-    max-width: min(500px, 80%);
+    align-content: space-between;
+    max-width: min(500px, 100%);
+  }
+
+  .section .keywords h3 {
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--secondary);
   }
 }
 
@@ -354,6 +355,12 @@ main {
 @media screen and (min-width: 750px) {
   #gallery img.horizontal {
     grid-column: span 3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #gallery img.horizontal {
+    grid-column: span 4;
   }
 }
 

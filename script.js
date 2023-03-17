@@ -5,33 +5,38 @@ const galleryData = [
   [{ name: 'vélo sport', format: '2/1' }],
   [{ name: 'couverture mémoire', format: '1/2' }],
   [{ name: 'isolated posters', format: '1/2' }],
-  [{ name: 'bonhomme geometrique', format: '1/2' }],
+  [{ name: 'race cars 4', format: '1/2' }],
   [{ name: 'bal des pompiers', format: '2/1' }],
+  [{ name: 'race cars 2', format: '1/2' }],
+  [{ name: 'bonhomme geometrique', format: '1/2' }],
+
   // [{ name: 'visage noir et blanc', format: '1/2' }],
   // [{ name: 'olio e burro', format: '1/2' }],
   // [{ name: 'panonica', format: '1/2' }],
-  [{ name: 'workshop typo', format: '2/1' }],
   // [{ name: 'oeil', format: '1/2' }],
   [{ name: 'fanzine', format: '1/2' }],
   // [{ name: 'maulevrier', format: '1/2' }],
   [{ name: 'affiche processus', format: '1/2' }],
   [{ name: 'savon 1', format: '1/2' }],
+  [{ name: 'workshop typo', format: '2/1' }],
 ]
 
 const data = [
   {
     name: 'Olio e Burro',
     cover: './img/gallery/olio e burro.webp',
-    keywords: ['Branding', 'Illustration', 'Web'],
+    keywords: ['Branding', 'Identité visuelle', 'Web'],
     challenge:
       "Trouver l'équilibre entre l'aspect artisanal et moderne, tout en transmettant la simplicité et le savoir-faire de leur cuisine avec une identité visuelle élégante et contemporaine pour attirer les clients.",
     solution:
       "Une palette de couleurs naturelles, des illustrations dessinées à la main et des typographies simples mais modernes pour créer une identité visuelle qui reflète parfaitement l'atmosphère chaleureuse et authentique d'Olio e Burro.",
     imgs: [
-      './img/Projet 1/olio 1.webp',
-      './img/Projet 1/olio 2.webp',
+      // './img/Projet 1/olio 1.webp',
+
       './img/Projet 1/olio 6.webp',
+      './img/Projet 1/olio 2.webp',
       './img/Projet 1/olio 7.webp',
+
       // './img/Projet 1/olio 5.webp',
       // './img/Projet 1/olio 4.webp',
       // './img/Projet 1/olio 3.webp',
@@ -42,7 +47,7 @@ const data = [
   {
     name: 'Pannonica',
     cover: './img/Projet 2/Pannonica 1.webp',
-    keywords: ['Identité visuelle', 'Édition', 'Web'],
+    keywords: ['Édition', 'Identité visuelle', 'Web'],
     challenge:
       "Une refonte de l'identité visuelle à la fois sobre et élégante, mais également facilement identifiable pour la scène de jazz et de musiques improvisées à Nantes.",
     solution:
@@ -81,15 +86,15 @@ const data = [
   {
     name: 'PCFP',
     cover: './img/Projet 4/PCFP 01.webp',
-    keywords: ['Identité visuelle', 'Branding'],
+    keywords: ['Branding', 'Identité visuelle'],
     challenge:
       'Créer un logo simple et facilement identifiable pour représenter un organisme qui offre des services de préparation aux examens du secteur public.',
     solution:
       "Un logo monochrome composé uniquement d'éléments typographiques. Cette approche de conception permet d'obtenir une esthétique simple et épurée qui reflète l'essence de la mission de l'entreprise.",
     imgs: [
       './img/Projet 4/PCFP 01.webp',
-      './img/Projet 4/PCFP 02.webp',
-      './img/Projet 4/PCFP 03.webp',
+      // './img/Projet 4/PCFP 02.webp',
+      // './img/Projet 4/PCFP 03.webp',
     ],
     description:
       "L'organisme Préparation au Concours de la Fonction Publique propose des modules de cours pour préparer ses clients aux concours de la fonction publique.",
@@ -258,6 +263,7 @@ function projectsBuilding() {
   galleryData.forEach((galleryIMG) => {
     const img = gallery.appendChild(document.createElement('img'))
     img.src = `./img/gallery/${galleryIMG[0].name}.webp`
+    img.setAttribute('onclick', 'magnify(this)')
     if (galleryIMG[0].format == '2/1') {
       img.classList.add('horizontal')
     }
