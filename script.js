@@ -24,7 +24,7 @@ const galleryData = [
 const data = [
   {
     name: 'Olio e Burro',
-    cover: './img/gallery/olio e burro.webp',
+    cover: './img/Projet 1/olio 7.webp',
     keywords: ['Branding', 'Identité visuelle', 'Web'],
     challenge:
       "Trouver l'équilibre entre l'aspect artisanal et moderne, tout en transmettant la simplicité et le savoir-faire de leur cuisine avec une identité visuelle élégante et contemporaine pour attirer les clients.",
@@ -32,14 +32,12 @@ const data = [
       "Une palette de couleurs naturelles, des illustrations dessinées à la main et des typographies simples mais modernes pour créer une identité visuelle qui reflète parfaitement l'atmosphère chaleureuse et authentique d'Olio e Burro.",
     imgs: [
       // './img/Projet 1/olio 1.webp',
-
       './img/Projet 1/olio 6.webp',
       './img/Projet 1/olio 2.webp',
       './img/Projet 1/olio 7.webp',
-
       // './img/Projet 1/olio 5.webp',
       // './img/Projet 1/olio 4.webp',
-      // './img/Projet 1/olio 3.webp',
+      './img/Projet 1/olio 3.webp',
     ],
     description:
       "Olio e Burro est un restaurant né de la rencontre d'un français et d'une italienne amoureux de leur culture. Ils proposent une cuisine locale et sans gluten qui valorise la simplicité et le savoir faire. Le couple propose des plats fait maison à partir de produits bruts. C'est un endroit idéal pour les amateurs de cuisine italienne à la recherche d'ingrédients authentiques. ",
@@ -61,45 +59,6 @@ const data = [
       "Pannonica est une scène de jazz et de musiques improvisées située à Nantes, en France. Elle propose une programmation régulière de concerts, d'expositions et de rencontres avec des artistes locaux et internationaux. C'est un lieu incontournable pour les amateurs de jazz et de musique expérimentale à Nantes.",
   },
   {
-    name: 'Parc Oriental Maulévrier',
-    cover: './img/Projet 3/Maulévrier 1.webp',
-    keywords: ['Édition', 'Identité visuelle'],
-    challenge:
-      "Concevoir un flyer qui soit compact et ludique, pour faciliter la déambulation des visiteurs. Il doit offrir une grande quantité d'informations de manière intuitive en respectant le style local.",
-    solution:
-      "Inspiré par les cartes de métro, le support choisi est dépliable afin de présenter un plan du parc complet et lisible au recto et les informations au verso. Le flyer du parc recense les informations pratiques du lieu et son histoire. L'identité visuelle est à l'image de la diversité de la végétation.",
-    imgs: [
-      './img/Projet 3/Maulévrier 1.webp',
-      // './img/Projet 3/Maulévrier 8.webp',
-      // './img/Projet 3/Maulévrier 2.webp',
-      // './img/Projet 3/Maulévrier 9.webp',
-      // './img/Projet 3/Maulévrier 10.webp',
-      // './img/Projet 3/Maulévrier 3.webp',
-      // './img/Projet 3/Maulévrier 4.webp',
-      // './img/Projet 3/Maulévrier 5.webp',
-      // './img/Projet 3/Maulévrier 6.webp',
-      // './img/Projet 3/Maulévrier 7.webp',
-    ],
-    description:
-      "Le Parc Oriental de Maulévrier est un jardin botanique japonais créé en 1899 par Alexander Marcel, un industriel passionné de botanique et d'arts asiatiques. S'étendant sur plus de 29 hectares, il contient plus de 300 espèces végétales venues du Japon, de Chine et de Corée, ainsi que de nombreux éléments traditionnels de l'art de vivre japonais tels que des ponts, des lanternes, des pagodes et des pavillons.",
-  },
-  {
-    name: 'PCFP',
-    cover: './img/Projet 4/PCFP 01.webp',
-    keywords: ['Branding', 'Identité visuelle'],
-    challenge:
-      'Créer un logo simple et facilement identifiable pour représenter un organisme qui offre des services de préparation aux examens du secteur public.',
-    solution:
-      "Un logo monochrome composé uniquement d'éléments typographiques. Cette approche de conception permet d'obtenir une esthétique simple et épurée qui reflète l'essence de la mission de l'entreprise.",
-    imgs: [
-      './img/Projet 4/PCFP 01.webp',
-      // './img/Projet 4/PCFP 02.webp',
-      // './img/Projet 4/PCFP 03.webp',
-    ],
-    description:
-      "L'organisme Préparation au Concours de la Fonction Publique propose des modules de cours pour préparer ses clients aux concours de la fonction publique.",
-  },
-  {
     name: 'Inktober',
     cover: './img/Projet 5/Inktober 1.webp',
     keywords: ['Illustration'],
@@ -108,16 +67,52 @@ const data = [
     solution:
       "Ces visuels, extraits de ma série d'inktober de 2021, ont été dessinés en noir et blanc et à l'encre.",
     imgs: [
+      './img/Projet 5/Inktober 7.webp',
+      './img/Projet 5/Inktober 5.webp',
+      './img/Projet 5/Inktober 6.webp',
       './img/Projet 5/Inktober 2.webp',
       './img/Projet 5/Inktober 1.webp',
       './img/Projet 5/Inktober 4.webp',
-      './img/Projet 5/Inktober 3.webp',
-      // './img/Projet 5/Inktober 5.webp',
-      './img/Projet 5/Inktober 6.webp',
-      './img/Projet 5/Inktober 7.webp',
+      // './img/Projet 5/Inktober 3.webp',
     ],
     description:
       "Réalisation de dessins à l'encre à l'occasion d'Inktober 2021. Inktober est un challenge créé par Jake Parker en 2009 qui permet d'améliorer rapidement ses compétences en dessin à main levée. C'est aussi une occasion de développer un style illustratif personnel.",
+  },
+  {
+    name: 'Motion',
+    cover: './img/Projet 4/Motion 1.webp',
+    keywords: ['Illustration', 'Animation'],
+    challenge:
+      'Peut-on briser la rigidité de la géométrie pour découvrir une scène animée dans laquelle les personnages prennent vie ?',
+    solution:
+      "Une scène occupée par des personnages géométriques créés sur illustrator qui s'articulent avant de quitter le décor. Les enjeux ? L'importance des points clés, de la synchronisation des calques et des effets.",
+    imgs: ['./img/Projet 4/Motion 1.webp'],
+    description:
+      "Avec l'arrivée des réseaux sociaux, la vidéo de courte durée occupe une place centrale dans nos quotidiens. À la découverte des outils comme After effects, les outils graphiques, la géométrie et les illustrations vectorielles s'animent pour nous transporter dans un univers haut en couleur.",
+  },
+  {
+    name: 'Maulévrier',
+    cover: './img/Projet 3/Maulévrier 1.webp',
+    keywords: ['Édition', 'Identité visuelle'],
+    challenge:
+      "Concevoir un flyer qui soit compact et ludique, pour faciliter la déambulation des visiteurs. Il doit offrir une grande quantité d'informations de manière intuitive en respectant le style local.",
+    solution:
+      "Inspiré par les cartes de métro, le support choisi est dépliable afin de présenter un plan du parc complet et lisible au recto et les informations au verso. Le flyer du parc recense les informations pratiques du lieu et son histoire. L'identité visuelle est à l'image de la diversité de la végétation.",
+    imgs: [
+      './img/Projet 3/Maulévrier 1.webp',
+      './img/Projet 3/Maulévrier 11.webp',
+      './img/Projet 3/Maulévrier 3.webp',
+      // './img/Projet 3/Maulévrier 8.webp',
+      // './img/Projet 3/Maulévrier 2.webp',
+      // './img/Projet 3/Maulévrier 9.webp',
+      // './img/Projet 3/Maulévrier 10.webp',
+      // './img/Projet 3/Maulévrier 4.webp',
+      // './img/Projet 3/Maulévrier 5.webp',
+      // './img/Projet 3/Maulévrier 6.webp',
+      // './img/Projet 3/Maulévrier 7.webp',
+    ],
+    description:
+      "Le Parc Oriental de Maulévrier est un jardin botanique japonais créé en 1899 par Alexander Marcel, un industriel passionné de botanique et d'arts asiatiques. S'étendant sur plus de 29 hectares, il contient plus de 300 espèces végétales venues du Japon, de Chine et de Corée, ainsi que de nombreux éléments traditionnels de l'art de vivre japonais tels que des ponts, des lanternes, des pagodes et des pavillons.",
   },
 ]
 
@@ -129,7 +124,7 @@ function buildProjectSection(main, section, project) {
     const infosH1 = infos.appendChild(document.createElement('h1'))
     infosH1.textContent = `0${data.indexOf(project) + 1}`
 
-    const infosH2 = infos.appendChild(document.createElement('h2'))
+    const infosH2 = infos.appendChild(document.createElement('h1'))
     infosH2.textContent = `${project.name}`
   }
   createProjectName()
@@ -168,9 +163,9 @@ function buildProjectSection(main, section, project) {
 
         const projetDesc = section.appendChild(document.createElement('div'))
         projetDesc.classList.add('description')
-        projetDesc.appendChild(document.createElement('h4')).textContent = 'Le Challenge'
+        projetDesc.appendChild(document.createElement('h4')).textContent = 'Les enjeux'
         projetDesc.appendChild(document.createElement('p')).textContent = `${project.challenge}`
-        projetDesc.appendChild(document.createElement('h4')).textContent = 'Ma Solution'
+        projetDesc.appendChild(document.createElement('h4')).textContent = 'Le parti-pri'
         projetDesc.appendChild(document.createElement('p')).textContent = `${project.solution}`
 
         const retour = section.appendChild(document.createElement('a'))
@@ -233,10 +228,12 @@ function projectsBuilding() {
   data.forEach((project) => {
     const section = main.appendChild(document.createElement('div'))
     section.classList.add(`project${data.indexOf(project) + 1}`, 'section')
+    section.setAttribute('id', `project${data.indexOf(project) + 1}`)
     buildProjectSection(main, section, project)
   })
   const contactDiv = main.appendChild(document.createElement('div'))
   contactDiv.classList.add('contactDiv', 'section')
+  contactDiv.setAttribute('id', 'contactDiv')
   const contactContainer = contactDiv.appendChild(document.createElement('div'))
   contactContainer.classList.add('contactContainer')
   const contactIMG = contactContainer.appendChild(document.createElement('img'))
@@ -249,25 +246,22 @@ function projectsBuilding() {
   const contactBTN = contactInfos.appendChild(document.createElement('a'))
   contactBTN.href = 'test@gmail.com'
   contactBTN.textContent = 'CONTACTEZ-MOI'
-  // const discoverMore = contactContainer.appendChild(document.createElement('h3'))
-  // discoverMore.textContent =
-  //   'Curieux de découvrir davantage de mes projets réalisés sur les trois dernières années ?'
-  contactContainer.appendChild(document.createElement('img')).src = './img/fleche.svg'
+  // contactContainer.appendChild(document.createElement('img')).src = './img/fleche.svg'
 
   // Gallery
-  const galleryContainer = main.appendChild(document.createElement('div'))
-  galleryContainer.classList.add('galleryContainer', 'section')
-  const gallery = galleryContainer.appendChild(document.createElement('div'))
-  gallery.setAttribute('id', 'gallery')
+  // const galleryContainer = main.appendChild(document.createElement('div'))
+  // galleryContainer.classList.add('galleryContainer', 'section')
+  // const gallery = galleryContainer.appendChild(document.createElement('div'))
+  // gallery.setAttribute('id', 'gallery')
 
-  galleryData.forEach((galleryIMG) => {
-    const img = gallery.appendChild(document.createElement('img'))
-    img.src = `./img/gallery/${galleryIMG[0].name}.webp`
-    img.setAttribute('onclick', 'magnify(this)')
-    if (galleryIMG[0].format == '2/1') {
-      img.classList.add('horizontal')
-    }
-  })
+  // galleryData.forEach((galleryIMG) => {
+  //   const img = gallery.appendChild(document.createElement('img'))
+  //   img.src = `./img/gallery/${galleryIMG[0].name}.webp`
+  //   img.setAttribute('onclick', 'magnify(this)')
+  //   if (galleryIMG[0].format == '2/1') {
+  //     img.classList.add('horizontal')
+  //   }
+  // })
 }
 projectsBuilding()
 
