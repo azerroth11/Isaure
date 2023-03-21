@@ -147,13 +147,13 @@ a {
   margin: 0 auto;
   place-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 #hero svg {
   font-family: 'Russo One', sans-serif;
-  /* height: 100%; */
-  transform: translateY(50%);
-  /* overflow: visible; */
+  height: 150px;
+  transform: translateY(125%);
 }
 
 #hero svg text {
@@ -161,7 +161,7 @@ a {
   animation: stroke 2s infinite alternate;
   stroke-width: 2;
   stroke: var(--accent);
-  font-size: 8vh;
+  font-size: min(8vw, 4rem);
 }
 
 @keyframes stroke {
