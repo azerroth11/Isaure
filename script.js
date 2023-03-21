@@ -352,17 +352,12 @@ function magnify(img) {
   }
 }
 
-const word = document.getElementById('wave').textContent
-let html = ''
-for (let i = 0; i < word.length; i++) {
-  html += `<span>${word[i]}</span>`
-}
-document.getElementById('wave').innerHTML = html
+const words = ['Identité visuelle', 'Direction artistique', 'Édition', 'Web', 'Motion Design']
 
-const spans = document.querySelectorAll('#wave span')
-console.log(spans)
-const delay = 0.3 // Change this value to adjust the delay between each letter
+let wordIndex = 0
+const heroText = document.getElementById('hero-text')
 
-for (let i = 0; i < spans.length; i++) {
-  spans[i].style.animationDelay = `${delay * i}s`
-}
+setInterval(function () {
+  heroText.textContent = words[wordIndex]
+  wordIndex = (wordIndex + 1) % words.length
+}, 4000)
