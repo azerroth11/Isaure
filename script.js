@@ -179,7 +179,7 @@ function buildProjectSection(main, section, project) {
           }, 500)
         })
 
-        if (window.innerWidth >= 1024) {
+        if (window.innerWidth >= 1200) {
           section.lastChild.insertAdjacentElement(
             'afterend',
             document.getElementsByClassName('swiper')[0]
@@ -192,7 +192,7 @@ function buildProjectSection(main, section, project) {
       }, 500)
     })
 
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth >= 1200) {
       section.lastChild.insertAdjacentElement('afterend', cover)
     }
   } else {
