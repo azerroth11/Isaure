@@ -352,32 +352,17 @@ function magnify(img) {
   }
 }
 
-const words = document.querySelectorAll('#hero h2')
-let index = 0
-
-function animateWord(index) {
-  if (index >= words.length) {
-    index = 0
-  }
-  const word = words[index]
-  index++
-
-  // Generate a random position within the hero
-  const x = Math.floor(Math.random() * (window.innerWidth - word.clientWidth))
-  const y = Math.floor(Math.random() * (window.innerHeight - word.clientHeight))
-
-  // Set the initial position of the word
-  word.style.left = `${x}px`
-  word.style.top = `${y}px`
-
-  // Make the word appear and disappear using CSS animation
-  setTimeout(() => {
-    word.classList.remove('animate')
-    void word.offsetWidth
-    word.classList.add('animate')
-    setTimeout(() => {
-      animateWord(index)
-    }, 2000)
-  }, 1000)
+const word = document.getElementById('wave').textContent
+let html = ''
+for (let i = 0; i < word.length; i++) {
+  html += `<span>${word[i]}</span>`
 }
-animateWord(0)
+document.getElementById('wave').innerHTML = html
+
+const spans = document.querySelectorAll('#wave span')
+console.log(spans)
+const delay = 0.3 // Change this value to adjust the delay between each letter
+
+for (let i = 0; i < spans.length; i++) {
+  spans[i].style.animationDelay = `${delay * i}s`
+}
