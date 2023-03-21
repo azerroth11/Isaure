@@ -352,7 +352,7 @@ function magnify(img) {
   }
 }
 
-const words = ['Identité visuelle', 'Direction artistique', 'Édition', 'Web', 'Motion Design']
+const words = ['Illustrations', 'Édition', 'Web', 'Motion Design', 'Graphisme']
 
 let wordIndex = 0
 const heroText = document.getElementById('hero-text')

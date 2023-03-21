@@ -23,7 +23,6 @@
 }
 
 html {
-  /* scroll-snap-type: y proximity; */
   scroll-behavior: smooth;
 }
 
@@ -35,7 +34,6 @@ body {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="10" fill="blue"/></svg>')
       10 10,
     auto;
-  /* overflow-y: scroll; */
   display: grid;
   place-items: center;
 }
@@ -52,14 +50,12 @@ a {
 
 .section {
   height: 100vh;
-  /* max-height: min(1080px, 100vh); */
   max-width: 1500px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   gap: 3.5vh;
-  /* border: 1px solid red; */
   scroll-snap-align: center;
   position: relative;
   overflow: hidden;
@@ -153,7 +149,7 @@ a {
 #hero svg {
   font-family: 'Russo One', sans-serif;
   height: 150px;
-  transform: translateY(125%);
+  transform: translateY(150%);
 }
 
 #hero svg text {
@@ -161,7 +157,7 @@ a {
   animation: stroke 2s infinite alternate;
   stroke-width: 2;
   stroke: var(--accent);
-  font-size: min(8vw, 4rem);
+  font-size: min(10vw, 8rem);
 }
 
 @keyframes stroke {
@@ -196,6 +192,7 @@ a {
 }
 
 #hero img:first-of-type {
+  margin-top: -5rem;
   width: 44px;
   animation: invite 2s infinite ease-in-out;
 }
@@ -215,9 +212,9 @@ a {
 #hero img:last-of-type {
   position: absolute;
   top: 0;
-  right: 10vw;
+  left: 80vw;
   z-index: -1;
-  max-height: min(500px, 25vh);
+  height: 25vh;
 }
 
 /* Swiper */
@@ -425,6 +422,12 @@ main {
   width: 100%;
   object-fit: contain;
   background-color: white;
+}
+
+@media screen and (max-height: 700px) {
+  #hero svg {
+    transform: translateY(100%);
+  }
 }
 
 /* Phones too small to display all infos */
