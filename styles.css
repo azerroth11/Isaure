@@ -343,15 +343,13 @@ a {
 
 /* Gallery */
 .gallery {
-  /* display: grid;
-  place-items: start center;
-  align-items: start; */
   justify-content: flex-start;
   align-items: center;
   gap: 5vh;
   flex-wrap: nowrap;
   min-height: 50vh;
   height: auto;
+  padding: 0 1rem;
 }
 
 .gallery .categorySelector {
@@ -360,7 +358,6 @@ a {
   justify-content: flex-start;
   gap: 0.75rem;
   margin-top: 2rem;
-  padding: 0 1rem;
   max-width: min(950px, 100%);
 }
 
@@ -378,15 +375,13 @@ a {
 .gallery .galleryDisplay {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   gap: 0.5rem;
-  padding: 0 1rem;
+  justify-content: center;
 }
 
 .gallery .galleryDisplay img {
-  max-height: 22.5vh;
+  max-height: 250px;
   object-fit: contain;
-  margin: 0 auto;
 }
 
 /* Javascript */
@@ -473,16 +468,11 @@ main {
   .section .infos,
   .section .keywords,
   .section .description {
-    /* max-width: 50ch; */
     margin: 0 auto;
   }
 
   .section .swiper {
     height: 100%;
     width: 50%;
-  }
-
-  .section .imgContainer {
-    /* height: 100%; */
   }
 }

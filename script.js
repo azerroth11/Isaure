@@ -306,6 +306,7 @@ function galleryBuilding(main) {
       }, 250)
     })
   })
+  document.querySelector('.categorySelector').firstChild.click()
 }
 
 function contactBuilding(main) {
