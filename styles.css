@@ -347,9 +347,9 @@ a {
   align-items: center;
   gap: 5vh;
   flex-wrap: nowrap;
-  min-height: 50vh;
-  height: auto;
   padding: 0 1rem;
+  height: auto;
+  min-height: 100vh;
 }
 
 .gallery .categorySelector {
