@@ -56,7 +56,6 @@ a {
   flex-direction: column;
   justify-content: center;
   gap: 3.5vh;
-  scroll-snap-align: center;
   position: relative;
   overflow: hidden;
 }
@@ -147,14 +146,13 @@ a {
 }
 
 #hero svg {
-  font-family: 'Russo One', sans-serif;
   height: 150px;
   transform: translateY(150%);
 }
 
 #hero svg text {
   text-transform: uppercase;
-  animation: stroke 2s infinite alternate;
+  animation: stroke 1s infinite alternate;
   stroke-width: 2;
   stroke: var(--accent);
   font-size: min(10vw, 8rem);
@@ -194,19 +192,7 @@ a {
 #hero img:first-of-type {
   margin-top: -5rem;
   width: 44px;
-  animation: invite 2s infinite ease-in-out;
-}
-
-@keyframes invite {
-  0% {
-    transform: translateY(0) rotate(90deg);
-  }
-  50% {
-    transform: translateY(15px) rotate(90deg);
-  }
-  100% {
-    transform: translateY(0) rotate(90deg);
-  }
+  transform: rotate(90deg);
 }
 
 #hero img:last-of-type {
@@ -356,31 +342,51 @@ a {
 }
 
 /* Gallery */
-.galleryContainer {
-  max-height: none;
-  height: fit-content;
-  max-width: 100vw;
-  margin-bottom: 0;
+.gallery {
+  /* display: grid;
+  place-items: start center;
+  align-items: start; */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5vh;
+  flex-wrap: nowrap;
+  min-height: 50vh;
+  height: auto;
 }
 
-#gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: auto;
-  grid-auto-flow: dense;
-  max-width: min(1000px, 100%);
-  gap: 0.25rem;
+.gallery .categorySelector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  max-width: min(950px, 100%);
 }
 
-#gallery img {
-  height: 100%;
-  /* min-width: 100%; */
-  max-width: 100%;
-  object-fit: cover;
+.gallery .categorySelector h3 {
+  transition: border 0.25s;
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
 }
 
-#gallery img.horizontal {
-  place-self: center;
+.gallery .categorySelector h3:hover {
+  border: 2px solid var(--accent);
+}
+
+.gallery .galleryDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.gallery .galleryDisplay img {
+  max-height: 22.5vh;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 /* Javascript */

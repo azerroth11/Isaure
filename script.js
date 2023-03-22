@@ -1,24 +1,53 @@
 const galleryData = [
-  [{ name: 'divingWoman', format: '1/2' }],
-  [{ name: 'PFCP', format: '1/2' }],
-  [{ name: 'la danse des oiseaux', format: '1/2' }],
-  [{ name: 'vélo sport', format: '2/1' }],
-  [{ name: 'couverture mémoire', format: '1/2' }],
-  [{ name: 'isolated posters', format: '1/2' }],
-  [{ name: 'race cars 4', format: '1/2' }],
-  [{ name: 'bal des pompiers', format: '2/1' }],
-  [{ name: 'race cars 2', format: '1/2' }],
-  [{ name: 'bonhomme geometrique', format: '1/2' }],
-
-  // [{ name: 'visage noir et blanc', format: '1/2' }],
-  // [{ name: 'olio e burro', format: '1/2' }],
-  // [{ name: 'panonica', format: '1/2' }],
-  // [{ name: 'oeil', format: '1/2' }],
-  [{ name: 'fanzine', format: '1/2' }],
-  // [{ name: 'maulevrier', format: '1/2' }],
-  [{ name: 'affiche processus', format: '1/2' }],
-  [{ name: 'savon 1', format: '1/2' }],
-  [{ name: 'workshop typo', format: '2/1' }],
+  {
+    category: 'Identité visuelle',
+    entries: ['logo race cars location', 'race cars 2', 'PCFP', 'PCFP2'],
+  },
+  {
+    category: 'Urbanisme',
+    entries: [
+      'festival up 5',
+      'festival up 3',
+      'maquette festival up2',
+      'festival up 6',
+      'isolated posters',
+    ],
+  },
+  {
+    category: 'Pratique plastique',
+    entries: [
+      'savon 1',
+      'savon 2',
+      'la danse des oiseaux',
+      'la danse des oiseaux 2',
+      'affiche processus',
+      'sweat blanc fond blanc',
+    ],
+  },
+  {
+    category: 'Édition',
+    entries: ['couverture mémoire', 'mock up mémoire', 'flipbook', 'flipbook 2'],
+  },
+  {
+    category: 'Code processing',
+    entries: [
+      'processing1',
+      'processing2',
+      'processing3',
+      'processing4',
+      'processing5',
+      'processing6',
+    ],
+  },
+  {
+    category: 'Modélisation 3D',
+    entries: ['blender1', 'blender3', 'coquillage 8', 'etoile de mer 4'],
+  },
+  { category: 'Signalétique', entries: ['vélo sport', 'bal des pompiers2'] },
+  {
+    category: 'Fanzine et cartes postales',
+    entries: ['utopie 3', 'divingWoman', "sang d'encre", 'oeil', 'fanzine 2', 'fanzine 5'],
+  },
 ]
 
 const data = [
@@ -231,6 +260,55 @@ function projectsBuilding() {
     section.setAttribute('id', `project${data.indexOf(project) + 1}`)
     buildProjectSection(main, section, project)
   })
+  galleryBuilding(main)
+  contactBuilding(main)
+}
+projectsBuilding()
+
+function galleryBuilding(main) {
+  const gallery = main.appendChild(document.createElement('div'))
+  gallery.classList.add('gallery', 'section')
+  const categorySelector = gallery.appendChild(document.createElement('div'))
+  categorySelector.classList.add('categorySelector')
+  const galleryDisplay = gallery.appendChild(document.createElement('div'))
+  galleryDisplay.classList.add('galleryDisplay')
+
+  galleryData.forEach((category) => {
+    const galleryCategoryH3 = categorySelector.appendChild(document.createElement('h3'))
+    galleryCategoryH3.textContent = category.category
+
+    galleryCategoryH3.addEventListener('click', () => {
+      Array.from(document.querySelector('.categorySelector').children).forEach((h3) => {
+        h3.style = 'border: 2px solid var(--secondary);'
+      })
+      galleryCategoryH3.style = 'border: 2px solid var(--accent);'
+
+      if (galleryDisplay.firstChild) {
+        galleryDisplay.classList.add('hidden')
+        setTimeout(() => {
+          Array.from(galleryDisplay.children).forEach((img) => {
+            img.remove()
+          })
+          galleryDisplay.classList.remove('hidden')
+        }, 250)
+      }
+
+      galleryDisplay.classList.add('hidden')
+      setTimeout(() => {
+        category.entries.forEach((elem) => {
+          const img = galleryDisplay.appendChild(document.createElement('img'))
+          img.src = `./img/gallery/${category.category}/${elem}.webp`
+          img.addEventListener('click', (i) => {
+            magnify(img)
+          })
+        })
+        galleryDisplay.classList.remove('hidden')
+      }, 250)
+    })
+  })
+}
+
+function contactBuilding(main) {
   const contactDiv = main.appendChild(document.createElement('div'))
   contactDiv.classList.add('contactDiv', 'section')
   contactDiv.setAttribute('id', 'contactDiv')
@@ -246,24 +324,7 @@ function projectsBuilding() {
   const contactBTN = contactInfos.appendChild(document.createElement('a'))
   contactBTN.href = 'test@gmail.com'
   contactBTN.textContent = 'CONTACTEZ-MOI'
-  // contactContainer.appendChild(document.createElement('img')).src = './img/fleche.svg'
-
-  // Gallery
-  // const galleryContainer = main.appendChild(document.createElement('div'))
-  // galleryContainer.classList.add('galleryContainer', 'section')
-  // const gallery = galleryContainer.appendChild(document.createElement('div'))
-  // gallery.setAttribute('id', 'gallery')
-
-  // galleryData.forEach((galleryIMG) => {
-  //   const img = gallery.appendChild(document.createElement('img'))
-  //   img.src = `./img/gallery/${galleryIMG[0].name}.webp`
-  //   img.setAttribute('onclick', 'magnify(this)')
-  //   if (galleryIMG[0].format == '2/1') {
-  //     img.classList.add('horizontal')
-  //   }
-  // })
 }
-projectsBuilding()
 
 function clearContent(section) {
   while (section.firstChild) {
@@ -360,4 +421,4 @@ const heroText = document.getElementById('hero-text')
 setInterval(function () {
   heroText.textContent = words[wordIndex]
   wordIndex = (wordIndex + 1) % words.length
-}, 4000)
+}, 2000)
