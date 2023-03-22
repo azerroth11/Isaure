@@ -189,13 +189,13 @@ a {
   text-align: center;
 }
 
-#hero img:first-of-type {
+#hero a {
   margin-top: -5rem;
   width: 44px;
   transform: rotate(90deg);
 }
 
-#hero img:last-of-type {
+#hero > img:last-of-type {
   position: absolute;
   top: 0;
   left: 80vw;
@@ -454,6 +454,16 @@ main {
 
 /* Desktop */
 @media screen and (min-width: 1200px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  #hero,
+  .section,
+  #contactDiv {
+    scroll-snap-align: start;
+  }
+
   .heroContainer {
     display: flex;
     gap: 7.5vw;
