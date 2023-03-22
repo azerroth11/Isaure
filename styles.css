@@ -377,6 +377,7 @@ a {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
+  transition: opacity 0.25s;
 }
 
 .gallery .galleryDisplay img {
@@ -390,7 +391,7 @@ main {
 }
 
 .hidden {
-  transition: opacity 0.25s;
+  transition: opacity 0.5s;
   opacity: 0;
 }
 

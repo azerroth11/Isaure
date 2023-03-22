@@ -283,17 +283,13 @@ function galleryBuilding(main) {
       })
       galleryCategoryH3.style = 'border: 2px solid var(--accent);'
 
-      if (galleryDisplay.firstChild) {
-        galleryDisplay.classList.add('hidden')
-        setTimeout(() => {
-          Array.from(galleryDisplay.children).forEach((img) => {
-            img.remove()
-          })
-          galleryDisplay.classList.remove('hidden')
-        }, 250)
-      }
-
       galleryDisplay.classList.add('hidden')
+      setTimeout(() => {
+        Array.from(galleryDisplay.children).forEach((img) => {
+          img.remove()
+        })
+      }, 250)
+
       setTimeout(() => {
         category.entries.forEach((elem) => {
           const img = galleryDisplay.appendChild(document.createElement('img'))
@@ -302,7 +298,9 @@ function galleryBuilding(main) {
             magnify(img)
           })
         })
-        galleryDisplay.classList.remove('hidden')
+        setTimeout(() => {
+          galleryDisplay.classList.remove('hidden')
+        }, 500)
       }, 250)
     })
   })
